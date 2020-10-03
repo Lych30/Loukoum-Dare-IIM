@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Pad : MonoBehaviour
 {
-   [Header("Bumper Value")]
-   [SerializeField] private float xValue;
-   [SerializeField] private float yValue;
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    [Header("Bumper Value")]
+    public Vector2 velocity;
+    private bool OnTop;
+    private void Start()
     {
-        if(collision.gameObject.tag == "Player")
+        OnTop = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        OnTop = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        OnTop = false;
+    }
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player" && OnTop == true)
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(xValue, yValue);
+            other.gameObject.GetComponent<Rigidbody2D>().velocity = velocity;
         }
     }
 }

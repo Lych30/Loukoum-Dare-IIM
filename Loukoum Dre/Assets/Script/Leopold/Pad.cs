@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Pad : MonoBehaviour
 {
+   [Header("Bumper Value")]
    [SerializeField] private float xValue;
    [SerializeField] private float yValue;
-    // Start is called before the first frame update
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "player")

@@ -22,7 +22,7 @@ public class PlayerMovements : MonoBehaviour
         {
             Jump();
         }
-            rb2D.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb2D.velocity.y);
+        rb2D.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb2D.velocity.y);
     }
 
     public void Jump()
@@ -33,6 +33,7 @@ public class PlayerMovements : MonoBehaviour
             isGrounded = false;
         }
         
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -41,5 +42,12 @@ public class PlayerMovements : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground") { isGrounded = false; }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.name == "death")
+        {
+            transform.position = new Vector2(transform.position.x, 5);
+        }
     }
 }

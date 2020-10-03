@@ -11,9 +11,13 @@ public class PlayerController : MonoBehaviour
     [Range(1, 10)]
     public float jumpVelocity = 5.0f;
     private bool isGrounded = true;
+    public Transform respawnPoint;
+    private SpriteRenderer sr;
 
     void Start(){
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+        sr = gameObject.GetComponent<SpriteRenderer>();
+        transform.position = respawnPoint.position;
     }
 
     void Update(){
@@ -21,6 +25,16 @@ public class PlayerController : MonoBehaviour
             Jump();
         }
         rb2D.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb2D.velocity.y);
+        if(rb2D.velocity.x > 0)
+        {
+            sr.flipX = false;
+            //respawnPoint.position = new Vector2(0.072f, respawnPoint.position.y);
+        }
+        if(rb2D.velocity.x < 0)
+        {
+            sr.flipX = true;
+            //respawnPoint.position = new Vector2(-0.072f, respawnPoint.position.y);
+        }
     }
 
     public void Jump(){

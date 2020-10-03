@@ -123,6 +123,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1127572788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6247383421817632218, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+  m_PrefabInstance: {fileID: 1651234602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1127572789
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127572788}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93ebfca67dcf0094abea841518436500, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1651234602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,6 +201,50 @@ PrefabInstance:
     - target: {fileID: 5851894901810701454, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247383421817632217, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fa6bbf3ab0ded844bb35b0ba11a2b884, type: 3}
+    - target: {fileID: 6247383421817632219, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.116578996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247383421817632219, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247383421817632219, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247383421817632219, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247383421817632219, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247383421817632219, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247383421817632219, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247383421817632219, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.39315802
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247383421817632222, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247383421817632222, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}

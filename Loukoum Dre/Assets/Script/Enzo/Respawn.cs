@@ -6,11 +6,13 @@ using UnityEngine;
 public class Respawn : MonoBehaviour{
 
     public Transform destination;
-    private int nbManche = 1;
-
+    private void Awake()
+    {
+        PlayerPrefs.SetInt("Manche", 1);
+    }
     public void Start()
     {
-        NewLevel(nbManche);
+        NewLevel(PlayerPrefs.GetInt("Manche",1));
     }
 
 
@@ -41,20 +43,19 @@ public class Respawn : MonoBehaviour{
     {
         switch (nbManche) {
             case 1:
-                print(nbManche);
-                
+                print(PlayerPrefs.GetInt("Manche")); 
                 break;
             case 2:
-                print(nbManche);
+                print(PlayerPrefs.GetInt("Manche"));
                 break;
             case 3:
-                print(nbManche);
+                print(PlayerPrefs.GetInt("Manche"));
                 break;
             case 4:
-                print(nbManche);
+                print(PlayerPrefs.GetInt("Manche"));
                 break;
             case 5:
-                print(nbManche);
+                print(PlayerPrefs.GetInt("Manche"));
                 break;
         }
     }
@@ -62,8 +63,8 @@ public class Respawn : MonoBehaviour{
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("Player")){
             collision.transform.position = destination.position;
-            nbManche++;
-            NewLevel(nbManche);
+            PlayerPrefs.SetInt("Manche", PlayerPrefs.GetInt("Manche")+1);
+            NewLevel(PlayerPrefs.GetInt("Manche"));
         }
     }
 

@@ -14,6 +14,7 @@ public class BulletMove : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         if (GameObject.Find("Player").GetComponent<SpriteRenderer>().flipX) { bulletSpeed = -bulletSpeed ; }
         else { bulletSpeed = math.abs(bulletSpeed); }
+        print(GameObject.Find("Player").GetComponent<SpriteRenderer>().flipX);
     }
 
     // Update is called once per frame
@@ -21,5 +22,6 @@ public class BulletMove : MonoBehaviour
     {
         rb.velocity = new Vector2(bulletSpeed, transform.position.y);
         print(playerSr.GetComponent<SpriteRenderer>().flipX);
+        
     }
 }

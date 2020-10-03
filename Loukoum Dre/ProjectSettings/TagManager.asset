@@ -8,6 +8,7 @@ TagManager:
   - Plateforme
   - Pics
   - Bullet
+  - Wall
   layers:
   - Default
   - TransparentFX

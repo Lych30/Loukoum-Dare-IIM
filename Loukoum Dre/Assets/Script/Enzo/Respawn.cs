@@ -15,30 +15,6 @@ public class Respawn : MonoBehaviour{
         NewLevel(PlayerPrefs.GetInt("Manche",1));
     }
 
-
-    bool active = true;
-    public void Update()
-    {
-        if (active) { StartCoroutine(Zbeub()); }
-        
-    }
-
-
-    IEnumerator Zbeub()
-    {
-        active = false;
-        yield return new WaitForSeconds(1.0f);
-        print("yo");
-        active = true;
-    }
-
-
-
-
-
-
-
-
     void NewLevel(int nbManche)
     {
         switch (nbManche) {

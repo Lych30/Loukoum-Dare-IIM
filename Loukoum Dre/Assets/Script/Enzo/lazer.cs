@@ -6,6 +6,8 @@ public class lazer : MonoBehaviour
 {
     private bool actif = true;
     public Transform destination;
+    public ParticleSystem particle1;
+    public ParticleSystem particle2;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -29,10 +31,14 @@ public class lazer : MonoBehaviour
         actif = false;
         yield return new WaitForSeconds(1);
         gameObject.GetComponent<Collider2D>().enabled = false;
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        
+        particle1.Stop();
+        particle2.Stop();
         yield return new WaitForSeconds(2);
         gameObject.GetComponent<Collider2D>().enabled = true;
-        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        
+        particle1.Play();
+        particle2.Play();
         actif = true;
     }
 }

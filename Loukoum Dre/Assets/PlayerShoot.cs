@@ -5,6 +5,7 @@ using UnityEngine.SocialPlatforms;
 
 public class PlayerShoot : MonoBehaviour
 {
+    public Animator animator;
     public GameObject playerBullet;
     public Transform shootPoint;
     private bool canShoot = true;
@@ -20,15 +21,20 @@ public class PlayerShoot : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0)) {
-            if (canShoot) {StartCoroutine(Shoot()); }
+            if (canShoot) { animator.SetBool("IsFiring", true); StartCoroutine(Shoot()); }
         }
     }
 
     IEnumerator Shoot()
     {
+        
         canShoot = false;
         Instantiate(playerBullet, shootPoint.position, Quaternion.identity);
         yield return new WaitForSeconds(shootDelay);
         canShoot = true;
+    }
+    private void FiringEnd()
+    {
+        animator.SetBool("IsFiring", false);
     }
 }

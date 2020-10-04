@@ -9,6 +9,7 @@ TagManager:
   - Pics
   - Bullet
   - Wall
+  - Ennemy
   layers:
   - Default
   - TransparentFX

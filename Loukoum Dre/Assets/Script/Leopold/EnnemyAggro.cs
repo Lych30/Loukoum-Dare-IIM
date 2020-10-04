@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnnemyAggro : MonoBehaviour
 {
+    private Animator animator;
     SpriteRenderer sprite;
     public int vie = 4;
     private float direction = 1;
@@ -18,6 +19,7 @@ public class EnnemyAggro : MonoBehaviour
     Rigidbody2D rb;
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         //animatotor = GetComponent<Animator>();
         skin = GetComponent<SpriteRenderer>();
@@ -26,7 +28,7 @@ public class EnnemyAggro : MonoBehaviour
     void Update()
     {
 
-
+       
         if (vie > 0)
         {
 
@@ -44,31 +46,19 @@ public class EnnemyAggro : MonoBehaviour
         }
         if (vie <= 0)
         {
-            gameObject.tag = "Untagged";
-            //animatotor.SetTrigger("dead");
-            rb.mass = 1000f;
-            GetComponent<CapsuleCollider2D>().size = new Vector2(1f, 2f);
-
-
+            Destroy(gameObject);
         }
 
 
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "NormalBullet")
+        if (collision.gameObject.tag == "Bullet")
         {
             sprite.color = new Color(1, 0, 0, 1);
-            Debug.Log("touché");
             vie -= 1;
             StartCoroutine("attendre");
 
-        }
-        if (collision.gameObject.tag == "BigBullet")
-        {
-            sprite.color = new Color(1, 0, 0, 1);
-            vie -= 10;
-            StartCoroutine("attendre");
         }
     }
     void ChasePlayer()
@@ -77,13 +67,13 @@ public class EnnemyAggro : MonoBehaviour
         {
             rb.velocity = new Vector2(moveSpeed, 0);
             skin.flipX = false;
-            //animatotor.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
+            animator.SetFloat("Velocity", Mathf.Abs(rb.velocity.x));
         }
         else if (transform.position.x > player.position.x)
         {
             rb.velocity = new Vector2(-moveSpeed, 0);
             skin.flipX = true;
-            //animatotor.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
+            animator.SetFloat("Velocity", Mathf.Abs(rb.velocity.x));
         }
 
     }

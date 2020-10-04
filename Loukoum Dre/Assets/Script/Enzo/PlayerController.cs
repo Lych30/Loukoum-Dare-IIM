@@ -40,6 +40,10 @@ public class PlayerController : MonoBehaviour
             sr.flipX = true;
             //respawnPoint.position = new Vector2(-0.072f, respawnPoint.position.y);
         }
+        if (!isGrounded)
+        {
+            animator.SetBool("is jumping", true);
+        }
     }
 
     public void Jump(){

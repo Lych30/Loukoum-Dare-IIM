@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("is jumping", true);
         }
+        print(isGrounded);
     }
 
     public void Jump(){

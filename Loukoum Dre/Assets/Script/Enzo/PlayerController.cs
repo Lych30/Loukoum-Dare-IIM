@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator animator;
     private Rigidbody2D rb2D;
     [Range(1, 10)]
     public float speed = 5.0f;
@@ -21,6 +24,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update(){
+        animator.SetFloat("Velocity",math.abs(rb2D.velocity.x));
         if (Input.GetKeyDown("space")){
             Jump();
         }

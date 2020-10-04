@@ -123,30 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1127572788 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6247383421817632218, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
-  m_PrefabInstance: {fileID: 1651234602}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1127572789
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127572788}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 93ebfca67dcf0094abea841518436500, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1651234602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -246,8 +222,76 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -7.46
       objectReference: {fileID: 0}
+    - target: {fileID: 6842952264362330377, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: edbece706181de1409a2d565928a87e1, type: 3}
+    - target: {fileID: 6842952264362330379, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.13835879
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842952264362330379, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842952264362330379, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842952264362330379, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842952264362330379, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842952264362330379, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842952264362330379, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842952264362330379, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.35684046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842952264362330379, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0014258847
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842952264362330379, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.094405815
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+--- !u!1 &1651234603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6842952264362330378, guid: 41035dd41b88a934db41bf9b6c1a23cb, type: 3}
+  m_PrefabInstance: {fileID: 1651234602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1651234604
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651234603}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d0b7b2ee3967244189abcd859f85f14, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2070455707
 GameObject:
   m_ObjectHideFlags: 0

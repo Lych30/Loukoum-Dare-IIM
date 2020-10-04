@@ -12,16 +12,16 @@ public class BulletMove : MonoBehaviour
     {
         Destroy(gameObject, deathTime);
         rb = gameObject.GetComponent<Rigidbody2D>();
-        if (GameObject.Find("player").GetComponent<SpriteRenderer>().flipX) { bulletSpeed = -bulletSpeed; }
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().flipX) { bulletSpeed = -bulletSpeed; }
         else { bulletSpeed = math.abs(bulletSpeed); }
-        print(GameObject.Find("player").GetComponent<SpriteRenderer>().flipX);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         rb.velocity = new Vector2(bulletSpeed, transform.position.y);
-        print(playerSr.GetComponent<SpriteRenderer>().flipX);
+      
         
     }
 

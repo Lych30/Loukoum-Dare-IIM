@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2658871247288669575}
   - component: {fileID: 5316561591234118585}
   - component: {fileID: 6532413280074950074}
+  - component: {fileID: 341062651646052563}
   m_Layer: 0
   m_Name: spike_tile_psd
   m_TagString: Pics
@@ -118,3 +119,16 @@ PolygonCollider2D:
       - {x: 0.035, y: -0.24}
       - {x: 0.114999995, y: -0.07}
       - {x: 0.16499999, y: 0.06}
+--- !u!114 &341062651646052563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4202617289689926219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b2c1a05f259a24f8cb8eb07f051c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 0}

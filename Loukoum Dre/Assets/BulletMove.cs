@@ -12,9 +12,9 @@ public class BulletMove : MonoBehaviour
     {
         Destroy(gameObject, deathTime);
         rb = gameObject.GetComponent<Rigidbody2D>();
-        if (GameObject.Find("Player").GetComponent<SpriteRenderer>().flipX) { bulletSpeed = -bulletSpeed ; }
+        if (GameObject.Find("player").GetComponent<SpriteRenderer>().flipX) { bulletSpeed = -bulletSpeed; }
         else { bulletSpeed = math.abs(bulletSpeed); }
-        print(GameObject.Find("Player").GetComponent<SpriteRenderer>().flipX);
+        print(GameObject.Find("player").GetComponent<SpriteRenderer>().flipX);
     }
 
     // Update is called once per frame
@@ -23,5 +23,14 @@ public class BulletMove : MonoBehaviour
         rb.velocity = new Vector2(bulletSpeed, transform.position.y);
         print(playerSr.GetComponent<SpriteRenderer>().flipX);
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Wall")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

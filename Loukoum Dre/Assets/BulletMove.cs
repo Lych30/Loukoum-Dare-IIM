@@ -20,18 +20,17 @@ public class BulletMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(bulletSpeed, transform.position.y);
-      
-        
+        rb.velocity = new Vector2(bulletSpeed, transform.position.y); 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Ennemy")
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
+
     }
    
 }

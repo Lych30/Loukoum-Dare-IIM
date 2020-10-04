@@ -7,7 +7,7 @@ using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviour
 {
-    public Animator animator;
+    private Animator animator;
     private Rigidbody2D rb2D;
     [Range(1, 10)]
     public float speed = 5.0f;
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sr;
 
     void Start(){
+        animator = GetComponent<Animator>();
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         sr = gameObject.GetComponent<SpriteRenderer>();
         transform.position = respawnPoint.position;

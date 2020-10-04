@@ -5,7 +5,7 @@ using UnityEngine.SocialPlatforms;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public Animator animator;
+    private Animator animator;
     public GameObject playerBullet;
     public Transform shootPoint;
     private bool canShoot = true;
@@ -13,7 +13,7 @@ public class PlayerShoot : MonoBehaviour
     public float shootDelay = 0.3f;
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
 
     }
 

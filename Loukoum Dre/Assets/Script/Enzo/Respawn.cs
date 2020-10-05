@@ -101,7 +101,7 @@ public class Respawn : MonoBehaviour{
             NewLevel(PlayerPrefs.GetInt("Manche"));
             if(PlayerPrefs.GetInt("Manche",1) >= 6)
             {
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene("Victory Screen");
                 print("vous avez gagné");
             }
         }

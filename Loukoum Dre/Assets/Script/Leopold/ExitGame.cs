@@ -11,7 +11,8 @@ public class ExitGame : MonoBehaviour
     }
     public void LauchGame()
     {
-        SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Additive);
+        PlayerPrefs.SetInt("Manche", 1);
+        SceneManager.LoadScene("Game", LoadSceneMode.Additive);
     }
     
     

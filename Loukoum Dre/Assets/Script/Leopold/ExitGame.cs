@@ -14,7 +14,5 @@ public class ExitGame : MonoBehaviour
         PlayerPrefs.SetInt("Manche", 1);
         SceneManager.LoadScene("Game", LoadSceneMode.Additive);
     }
-    
-    
-
+   
 }

@@ -34,16 +34,17 @@ public class Fall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        StartCoroutine(Wait(0.2f));
         rb.gravityScale = 0;
-        StartCoroutine(Wait());
+        StartCoroutine(Wait(1.0f));
 
         
         
     }
-    IEnumerator Wait()
+    IEnumerator Wait(float value)
     {
         estTombe = false;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(value);
         //transform.position = new Vector2(transform.position.x, transform.position.y + 0.01f);
         estTombe = true;
     }

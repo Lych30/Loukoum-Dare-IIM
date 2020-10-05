@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vie: 4
-  player: {fileID: 0}
+  player: {fileID: 4127239258549496496, guid: 6b735dc8fc57bb04e86b1ab5bf3dfb7d, type: 3}
   agroRange: 7.81
   moveSpeed: 3.18
 --- !u!70 &5052919055554976170

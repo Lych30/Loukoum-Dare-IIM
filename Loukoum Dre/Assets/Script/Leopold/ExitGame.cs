@@ -14,5 +14,6 @@ public class ExitGame : MonoBehaviour
         SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Additive);
     }
     
+    
 
 }

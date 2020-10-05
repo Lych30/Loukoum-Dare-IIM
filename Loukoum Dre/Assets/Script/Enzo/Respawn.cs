@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Respawn : MonoBehaviour{
 
     public Transform destination;
+    public GameObject objManche1, objManche2, objManche3, objManche4, objManche5, lazer1, lazer2, lazer3, lazer4;
     private void Awake()
     {
         PlayerPrefs.SetInt("Manche", 1);
@@ -18,24 +20,32 @@ public class Respawn : MonoBehaviour{
     void manche1()
     {
         print("obj manche1");
+        objManche1.SetActive(true);
     }
     void manche2()
     {
         manche1();
         print("obj manche2");
+        objManche2.SetActive(true);
+        lazer1.SetActive(true);
     }
     void manche3()
     {
         manche1();
         manche2();
         print("obj manche3");
+        objManche3.SetActive(true);
+        lazer2.SetActive(true);
     }
     void manche4()
     {
         manche1(); 
         manche2(); 
         manche3();
+        objManche4.SetActive(true);
         print("obj manche4");
+        lazer3.SetActive(true);
+        lazer4.SetActive(true);
     }
     void manche5()
     {
@@ -43,17 +53,15 @@ public class Respawn : MonoBehaviour{
         manche2();
         manche3();
         manche4();
+        objManche5.SetActive(true);
+        lazer1.SetActive(false);
+        lazer2.SetActive(false);
+        lazer3.SetActive(false);
+        lazer4.SetActive(false);
+
         print("obj manche5");
     }
-    void manche6()
-    {
-        manche1();
-        manche2();
-        manche3();
-        manche4();
-        manche5();
-        print("obj manche6");
-    }
+
 
 
 
@@ -83,10 +91,6 @@ public class Respawn : MonoBehaviour{
                 print(PlayerPrefs.GetInt("Manche"));
                 manche5();
                 break;
-            case 6:
-                print(PlayerPrefs.GetInt("Manche"));
-                manche6();
-                break;
         }
     }
 
@@ -95,6 +99,11 @@ public class Respawn : MonoBehaviour{
             collision.transform.position = destination.position;
             PlayerPrefs.SetInt("Manche", PlayerPrefs.GetInt("Manche")+1);
             NewLevel(PlayerPrefs.GetInt("Manche"));
+            if(PlayerPrefs.GetInt("Manche",1) >= 6)
+            {
+                SceneManager.LoadScene("Menu");
+                print("vous avez gagné");
+            }
         }
     }
 

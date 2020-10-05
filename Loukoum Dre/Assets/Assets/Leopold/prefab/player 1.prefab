@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4127239258549496501}
   - component: {fileID: 4127239258549496497}
   - component: {fileID: 4127239258549496498}
-  - component: {fileID: 4127239258549496499}
   - component: {fileID: 8183990720171618371}
   m_Layer: 0
   m_Name: player 1
@@ -165,21 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 3.5
   lowJumpMultiplier: 2
---- !u!114 &4127239258549496499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127239258549496500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63720920cbfcb0349ac87ddbb8b7028c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerBullet: {fileID: 6249500842415823392, guid: bca70fe598a8ce645ba511b8f9ba2fa6, type: 3}
-  shootPoint: {fileID: 4127239260311409262}
-  shootDelay: 0.3
 --- !u!95 &8183990720171618371
 Animator:
   serializedVersion: 3

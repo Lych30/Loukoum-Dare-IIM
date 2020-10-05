@@ -14,10 +14,10 @@ public class PlateformDestroyer : MonoBehaviour{
 
     IEnumerator PlateformDestroy(){
         active = false;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         gameObject.GetComponent<Collider2D>().enabled = false;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         gameObject.GetComponent<Collider2D>().enabled = true;
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
         active = true;

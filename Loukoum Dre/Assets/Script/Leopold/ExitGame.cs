@@ -12,7 +12,10 @@ public class ExitGame : MonoBehaviour
     public void LauchGame()
     {
         PlayerPrefs.SetInt("Manche", 1);
-        SceneManager.LoadScene("Game", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Game");
     }
-   
+   public void ToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
